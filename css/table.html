@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th,td{
+            padding: 7px 10px;
+            text-align: center;
+            border : 2px solid black;
+        }
+        tbody tr:hover{
+            background-color: grey;
+        }
+        thead tr{
+            background-color: green;
+        }
+        tbody tr td:first-child{
+            background-color: rgb(214, 233, 226);
+        }
+       
+    </style>
+</head>
+<body>  
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>age</th>
+                <th>university</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>saimon</td>
+                <td>24</td>
+                <td>wyu</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>saimon</td>
+                <td>24</td>
+                <td>wyu</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>saimon</td>
+                <td>24</td>
+                <td>wyu</td>
+            </tr>
+            <tr class="last">
+                <td colspan='3'>Total</td>
+                <td>12000</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

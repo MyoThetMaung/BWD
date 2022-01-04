@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Practical</title>
+    <style>
+        .box{
+            text-align: center;
+        }
+        fieldset{
+            display : inline-block;
+        }
+    </style>
+</head>
+<body>
+        <div class="box">
+            <form id="form">
+                <fieldset>
+                    <legend>Text Control</legend>
+                        <label for="">Text</label>
+                        <input type="text" id="text">
+
+                        <label for="">Color</label>
+                        <input type="color" id="color">
+
+                        <label for="">Font size</label>
+                        <input type="range" id="fontSize" min="10" max="100" value=10>
+
+                        <label for="">Font style</label>
+                        <select id="fontStyle">
+                            <option value="Helvetica">Helvetica</option>
+                            <option value="Gadget">Gadget</option>
+                            <option value="Times">Times</option>
+                        </select>
+
+                        <input type="submit" id= "submit" value="submit"> 
+                </fieldset>
+            </form>
+            <p id="output"></p>
+        </div>
+
+    <script>
+        let text = document.getElementById("text");
+        let output = document.getElementById("output");
+        let color = document.getElementById("color");
+        let fontsize = document.getElementById("fontSize");
+        let fontStyle = document.getElementById("fontStyle");
+        let form = document.getElementById("form");
+
+
+        text.addEventListener("keyup", function(){
+            output.innerText = this.value;
+        })
+
+        color.addEventListener("change", function(){
+            output.style.color = this.value;
+        })
+        
+        fontsize.addEventListener("change", function(){
+            output.style.fontSize = this.value+"px";
+        } )
+
+        fontStyle.addEventListener("change", function(){
+            output.style.fontFamily = this.value;
+        })
+        
+        submit.addEventListener("submit", function(){
+            
+        })
+
+
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+1. npm init
+2. go to npmjs website
+3. install packages
+4. delete note packages and run npm install to get packages in package.json
+5. npm un <package name> (delete package)
+6. npm update(to update version)

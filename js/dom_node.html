@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM node</title>
+</head>
+<body>
+    <!--    writing html code in js without html    -->
+
+    <script>
+
+        let p = document.createElement('p');
+        let text = document.createTextNode('my name is saimon');
+        let body  = document.body;
+        p.append(text);
+        body.append(p);
+
+
+        let img = document.createElement('img');
+        img.setAttribute('src', 'saimon.jpg');
+        img.style.width = "200px";            
+        body.append(img);
+
+
+        let ul = document.createElement('ul');
+        let li = document.createElement('li');
+        li.innerText = "apple";
+        ul.append(li);
+        body.prepend(ul);           
+
+        let li1 = document.createElement('li');
+        li1.innerText = "orange";
+        ul.append(li1);
+        body.append(ul);
+
+        //remove child
+        document.querySelector('ul').removeChild(li1);      
+
+       
+
+    </script>
+
+
+
+</body>
+</html>

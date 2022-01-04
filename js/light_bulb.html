@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light bulb</title>
+    <style>
+        .detect{
+            width:200px;
+            height:200px;
+            border: 2px solid black;
+            margin: 50px;
+            text-align:center;
+        }
+     
+    </style>
+</head>
+<body>
+
+   
+    <img id="bulb" src="bulboff.gif" width="100" height="180"> <br><br>
+
+    <button id="on" onclick="on()">ON</button>
+    <button id="off" onclick="off()">OFF</button> <br><br>
+    
+    <button id="toggle" onclick="toggle()">Toggle</button>
+
+    <div class='detect'>Detect light</div>
+
+
+
+    <script>
+
+        //on and off button
+
+        let bulb = document.querySelector('#bulb');
+        function on(){
+            bulb.setAttribute('src','bulbon.gif');
+        }
+        function off(){
+            bulb.setAttribute('src','bulboff.gif');
+        }
+
+
+        //toggle on and off 
+        function toggle(){
+            if(bulb.getAttribute('src')== 'bulboff.gif'){
+                on();
+            }else{
+                off();
+            }
+        }
+
+
+        //detect on and off
+            detect = document.querySelector('.detect');
+            detect.addEventListener('mouseenter', function(){
+                on();
+                setTimeout(off,5000);
+            } )
+    
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

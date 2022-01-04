@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array iteration</title>
+</head>
+<body>
+    <script>
+        let fruits = ['apple','orange','pineapple','banana'];
+        //FOREACH
+        fruits.forEach(function(i,index){
+            console.log(index, i);
+        })
+
+
+        //FOR OF
+        for(fruit of fruits){
+            console.log(fruit);
+        }
+
+        //MAP  {can use return to get new array (if condition is true or false)}
+        let arrMap = fruits.map(function(i,index){
+                        console.log(i);
+                        return index + " => " + i;   
+                    });
+        console.log(arrMap);
+
+        let marks = [12,40,50,100,32];
+        let markMap = marks.map(function(a){
+            return a>=40 ? "pass" : "fail";
+        })
+        console.log(markMap);
+
+        //FILTER   {can use return to get new array(if only true condition)}
+        let arrFilter = fruits.filter(function(f){
+            return f.length >5;
+        })
+        console.log(arrFilter);
+
+
+        //FIND      {if we get the right value, array will stop and print out}
+        let arrFind = marks.find(function(x){
+            console.log(x);
+            return x == 50; 
+        })
+        console.log(arrFind);
+
+
+       
+    </script>
+</body>
+</html>

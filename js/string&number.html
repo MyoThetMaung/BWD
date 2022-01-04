@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String and Number</title>
+</head>
+<body>
+    <script>
+
+        //NUMBER
+        let num = 12.3466;
+        let string = "123";
+        let weight = "108lb";
+        let money = "100.98$";
+
+        console.log(num.toPrecision(4));                //number including all
+        console.log(num.toFixed(3));                    //number after .
+        console.log(parseFloat(money));                 //remove lb
+        console.log(parseInt(weight));                  //remove $
+        console.log(Number(string));                    //string to number
+        console.log(Math.random());                     //random
+
+
+
+        //ARRAY
+        let fruits = ['apple','orange','banana'];
+        console.log(fruits.toString());                 //array to string with (,) join
+        console.log(fruits.join('^'));                  //array to string with (anything join)
+        /*
+        fruits.push('pineapple');                       //push last position
+        fruits.pop('watermelon');                       //remove last position
+        fruits.unshift('pineapple');                    //push first position
+        fruits.shift('pineapple');                      //remove first position
+        console.log(fruits);
+        */
+        console.log(fruits.sort());                     //sort alpha
+        console.log(fruits.reverse());                  //reverse alpha
+
+    
+
+    </script>
+</body>
+</html>
